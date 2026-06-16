@@ -116,6 +116,20 @@ export default {
             showForm: false
         }
     },
+    beforeCreate() {
+        console.log('beforeCreate chamado!');
+        console.log(this.tasks);
+    },
+    created() {
+        console.log('created chamado!');
+        console.log(this.tasks);
+    },
+    beforeMount() {
+        console.log('beforeMount chamado!');
+    },
+    mounted() {
+        console.log('mounted chamado!');
+    },
     methods: {
         removeTask(taskId) {
             this.tasks = this.tasks.filter(task => task.id !== taskId);

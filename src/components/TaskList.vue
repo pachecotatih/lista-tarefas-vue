@@ -130,6 +130,12 @@ export default {
     mounted() {
         console.log('mounted chamado!');
     },
+    beforeUpdate() {
+        console.log('beforeUpdate antes de atualizar as árvores dos componentes!');
+    },
+    updated() {
+        console.log('updated depois de atualizar!');
+    },
     methods: {
         removeTask(taskId) {
             this.tasks = this.tasks.filter(task => task.id !== taskId);

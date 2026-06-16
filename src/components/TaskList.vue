@@ -124,18 +124,14 @@ export default {
         console.log('created chamado!');
         console.log(this.tasks);
     },
-    beforeMount() {
-        console.log('beforeMount chamado!');
-    },
-    mounted() {
-        console.log('mounted chamado!');
-    },
+   
     beforeUpdate() {
-        console.log('beforeUpdate antes de atualizar as árvores dos componentes!');
+        console.log('TaskList -> beforeUpdate chamado!');
     },
     updated() {
-        console.log('updated depois de atualizar!');
+        console.log('TaskList -> updated chamado!');
     },
+   
     methods: {
         removeTask(taskId) {
             this.tasks = this.tasks.filter(task => task.id !== taskId);
@@ -198,7 +194,20 @@ export default {
         changeBtnAddClass() {
             return this.showForm ? 'btn-clear' : 'btn-add'
         }
-    }
+    },
+    beforeMount() {
+        console.log('beforeMount chamado!');
+    },
+    mounted() {
+        console.log('mounted chamado!');
+    },
+    beforeUnmount() {
+        console.log('beforeUnmount antes de desmontar!');
+    },
+    unmounted() {
+        console.log('unmounted depois de desmontar!');
+    },
+    
 }
 </script>
 <style>

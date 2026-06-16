@@ -38,7 +38,19 @@ export default {
         btnToggleText() {
             return this.task?.done ? 'Desfazer' : 'Concluir'
         },
-    }
+    },
+    beforeMount() {
+        console.log('TaskItem -> beforeMount chamado!');
+    },
+    mounted() {
+        console.log(`TaskItem ${this.task?.title} mounted chamado!`);
+    },
+    beforeUnmount() {
+        console.log('TaskItem -> beforeUnmount antes de desmontar!');
+    },
+    unmounted() {
+        console.log(`TaskItem ${this.task?.title} unmounted chamado!`);
+    },
 }
 </script>
 <style>

@@ -1,4 +1,4 @@
-# meu-primeiro-projeto-vue
+# lista-tarefas-vue
 
 ## Project setup
 ```
